@@ -10,7 +10,6 @@ public class CSVToXMLConverter
 
 	static JFrame jf_JFrame;
 	static JPanel jp_JPanel;
-	static JScrollPane jsp_JScrollPane;
 	static GridBagLayout gbl_GridBagLayout;
 	static GridBagConstraints gbc_GridBagConstraints;
 	static JLabel jl_csvFile;
@@ -56,7 +55,8 @@ public class CSVToXMLConverter
 		try
 		{
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex)
+		}
+		catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex)
 		{
 			Logger.getLogger(CSVToXMLConverter.class.getName()).log(Level.SEVERE, null, ex);
 		}
@@ -66,12 +66,6 @@ public class CSVToXMLConverter
 		jf_JFrame.setTitle("CSV to XML Converter");
 
 		jp_JPanel = new JPanel();
-		jsp_JScrollPane = new JScrollPane(jp_JPanel);
-		jsp_JScrollPane.setViewportView(jp_JPanel);
-		jp_JPanel.setAutoscrolls(true);
-		jf_JFrame.add(jsp_JScrollPane);
-
-		jf_JFrame.add(jsp_JScrollPane);
 		gbl_GridBagLayout = new GridBagLayout();
 		gbc_GridBagConstraints = new GridBagConstraints();
 		gbc_GridBagConstraints.fill = GridBagConstraints.HORIZONTAL;
