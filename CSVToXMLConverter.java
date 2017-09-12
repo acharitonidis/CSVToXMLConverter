@@ -412,7 +412,7 @@ public class CSVToXMLConverter
 						}
 						else if(stringArray_tagNames.length > stringArray_currentLineData.length)
 						{
-							JOptionPane.showMessageDialog(null, "Error: " + (int_delimitersDifference) + " less delimiter(s) found in record " + (int_currentLineNumber) + "." + '\n' + "Add the extra delimiter(s) and try again.");
+							JOptionPane.showMessageDialog(null, "Error: " + (int_delimitersDifference) + " delimiter(s) less found in record " + (int_currentLineNumber) + "." + '\n' + "Add the extra delimiter(s) and try again.");
 						}
 						else
 						{
