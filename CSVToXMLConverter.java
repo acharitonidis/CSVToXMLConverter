@@ -46,11 +46,11 @@ public class CSVToXMLConverter
 	 */
 	public static void main(String[] args)
 	{
-		initGUI();
-		initFunctionality();
+		initialiseGUI();
+		initialiseFunctionality();
 	}
 
-	public static void initGUI()
+	public static void initialiseGUI()
 	{
 		try
 		{
@@ -205,7 +205,7 @@ public class CSVToXMLConverter
 		jf_JFrame.setVisible(true);
 	}
 
-	public static void initFunctionality()
+	public static void initialiseFunctionality()
 	{
 		//throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 
