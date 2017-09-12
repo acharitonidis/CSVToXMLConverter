@@ -268,6 +268,8 @@ public class CSVToXMLConverter
 				} catch (Exception ex)
 				{
 					Logger.getLogger(CSVToXMLConverter.class.getName()).log(Level.SEVERE, null, ex);
+					
+					JOptionPane.showMessageDialog(null, "An unknown error occured." + '\n' + "Please review the options and try again.");
 				}
 			}
 		});
