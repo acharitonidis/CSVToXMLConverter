@@ -293,6 +293,7 @@ public class CSVToXMLConverter
 		jtf_groupTagsLineLayout.setEnabled(true);
 		jb_fileChooser.setEnabled(true);
 		jb_convert.setEnabled(true);
+		jtf_progress.setText(null);
 	}
 	
 	public static void setRunMode()
