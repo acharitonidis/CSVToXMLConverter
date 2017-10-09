@@ -350,7 +350,7 @@ public class CSVToXMLConverter
 								stringArray_tagNames = string_currentLineText.split(string_delimiter, -1);
 
 								string_currentLineText = br.readLine();
-								while (string_currentLineText != null && !"".equals(string_currentLineText))
+								while (string_currentLineText != null && !string_currentLineText.equals(""))
 								{
 									int_currentLineNumber++;
 									stringArray_currentLineData = string_currentLineText.split(string_delimiter, -1);
