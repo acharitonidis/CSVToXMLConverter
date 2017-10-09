@@ -362,16 +362,30 @@ public class CSVToXMLConverter
 									}
 									
 									int_maximumArrayLength=stringArray_tagNames.length + Math.abs(stringArray_tagNames.length - stringArray_currentLineData.length);
-
+									
 									for (int_currentTableIndex=0; int_currentTableIndex < int_maximumArrayLength; int_currentTableIndex++)
 									{
 										if(jtf_groupTagsLineLayout.getText().equals("same"))
 										{
-											bw.append("<" + (stringArray_tagNames[int_currentTableIndex].replaceAll("\"", "")) + ">" + (stringArray_currentLineData[int_currentTableIndex].replaceAll("\"", "")) + "</" + (stringArray_tagNames[int_currentTableIndex].replaceAll("\"", "")) + ">");
+											if(stringArray_currentLineData[int_currentTableIndex]==null || stringArray_currentLineData[int_currentTableIndex].equals(""))
+											{
+												bw.append("<" + (stringArray_tagNames[int_currentTableIndex].replaceAll("\"", "")) + " />");
+											}
+											else
+											{
+												bw.append("<" + (stringArray_tagNames[int_currentTableIndex].replaceAll("\"", "")) + ">" + (stringArray_currentLineData[int_currentTableIndex].replaceAll("\"", "")) + "</" + (stringArray_tagNames[int_currentTableIndex].replaceAll("\"", "")) + ">");
+											}
 										}
 										else if(jtf_groupTagsLineLayout.getText().equals("new"))
 										{
-											bw.append('\t' + "" + '\t' + "<" + (stringArray_tagNames[int_currentTableIndex].replaceAll("\"", "")) + ">" + (stringArray_currentLineData[int_currentTableIndex].replaceAll("\"", "")) + "</" + (stringArray_tagNames[int_currentTableIndex].replaceAll("\"", "")) + ">" + '\n');
+											if(stringArray_currentLineData[int_currentTableIndex]==null || stringArray_currentLineData[int_currentTableIndex].equals(""))
+											{
+												bw.append('\t' + "" + '\t' + "<" + (stringArray_tagNames[int_currentTableIndex].replaceAll("\"", "")) + " />" + '\n');
+											}
+											else
+											{
+												bw.append('\t' + "" + '\t' + "<" + (stringArray_tagNames[int_currentTableIndex].replaceAll("\"", "")) + ">" + (stringArray_currentLineData[int_currentTableIndex].replaceAll("\"", "")) + "</" + (stringArray_tagNames[int_currentTableIndex].replaceAll("\"", "")) + ">" + '\n');
+											}											
 										}
 									}
 									
